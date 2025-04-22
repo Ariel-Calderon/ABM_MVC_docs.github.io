@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ABM_MVC package &#8212; documentación de pirulo - 0.1</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=9c9b61ad"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=f85f4cfb"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="ABM_MVC" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="abm-mvc-package">
+<h1>ABM_MVC package<a class="headerlink" href="#abm-mvc-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-ABM_MVC.controlador">
+<span id="abm-mvc-controlador-module"></span><h2>ABM_MVC.controlador module<a class="headerlink" href="#module-ABM_MVC.controlador" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ABM_MVC.controlador.</span></span><span class="sig-name descname"><span class="pre">Entidad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_de_campos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_de_valores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>SúperClase que gestionará las Altas, Bajas y Modificaciones de cualquier entidad representada en una base de datos.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.tabla">
+<span class="sig-name descname"><span class="pre">tabla</span></span><a class="headerlink" href="#ABM_MVC.controlador.Entidad.tabla" title="Link to this definition">¶</a></dt>
+<dd><p>Nombre de la tabla.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.campo_clave">
+<span class="sig-name descname"><span class="pre">campo_clave</span></span><a class="headerlink" href="#ABM_MVC.controlador.Entidad.campo_clave" title="Link to this definition">¶</a></dt>
+<dd><p>Nombre del campo que contiene la clave/id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#ABM_MVC.controlador.Entidad.id" title="Link to this definition">¶</a></dt>
+<dd><p>Identificador de un registro en la table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.lista_de_campos">
+<span class="sig-name descname"><span class="pre">lista_de_campos</span></span><a class="headerlink" href="#ABM_MVC.controlador.Entidad.lista_de_campos" title="Link to this definition">¶</a></dt>
+<dd><p>Lista que contiene los nombres de los campos de la tabla.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.modulo_ubicacion">
+<span class="sig-name descname"><span class="pre">modulo_ubicacion</span></span><a class="headerlink" href="#ABM_MVC.controlador.Entidad.modulo_ubicacion" title="Link to this definition">¶</a></dt>
+<dd><p>Módulo en el que se encuentran las clases concretas, se define como atributo de clase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>module</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.base">
+<span class="sig-name descname"><span class="pre">base</span></span><a class="headerlink" href="#ABM_MVC.controlador.Entidad.base" title="Link to this definition">¶</a></dt>
+<dd><p>Objeto que gestiona la conexión y operaciones en la base.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.asignar_valores">
+<span class="sig-name descname"><span class="pre">asignar_valores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formulario</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.asignar_valores"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.asignar_valores" title="Link to this definition">¶</a></dt>
+<dd><p>Asigna valores a los atributos de un objeto vacío a partir de los valores obtenidos de un formulario de una capa superior.
+Para que la operación sea posible es necesario que los nombres de los widgets del formulario coincidan con los nombres de los campos de la tabla en la base de datos.
+En la capa con la vista del usuario se definen los métodos que garantizan la creación de widgets con los nombres adecuados.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>formulario</strong> (<em>objet</em>) – Formulario con nombres de widgets compatibles con los atributos del objeto.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.borrar">
+<span class="sig-name descname"><span class="pre">borrar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.borrar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.borrar" title="Link to this definition">¶</a></dt>
+<dd><p>Elimina el registro de la base de datos correspondiente al objeto.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.completar_campos">
+<span class="sig-name descname"><span class="pre">completar_campos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formulario</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.completar_campos"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.completar_campos" title="Link to this definition">¶</a></dt>
+<dd><p>Completa los inputs de un formulario con los valores de los atributos del objeto.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>formulario</strong> (<em>object</em>) – Formulario con nombres de widgets compatibles con los atributos del objeto.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.guardar">
+<span class="sig-name descname"><span class="pre">guardar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.guardar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.guardar" title="Link to this definition">¶</a></dt>
+<dd><p>Guarda los datos de un objeto en un nuevo registro de la Base de datos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>El primer valor de la lista corresponde a la confirmación de la acción y el segundo el mensaje a mostrar al usuario.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[bool,str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.modificar">
+<span class="sig-name descname"><span class="pre">modificar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.modificar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.modificar" title="Link to this definition">¶</a></dt>
+<dd><p>Modifica el registro de la base de datos correspondiente al objeto.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Un entero con la cantidad de registros modificados.</p></li>
+<li><p>None si ocurre un error durante la ejecución.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>int | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.obtener_valor">
+<span class="sig-name descname"><span class="pre">obtener_valor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">campo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.obtener_valor"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.obtener_valor" title="Link to this definition">¶</a></dt>
+<dd><p>Devuelve el valor de un atributo del objeto.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>campo</strong> (<em>str</em>) – Nombre del atributo</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor del atributo en cuestión.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.pasar_ubicacion_modulo">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pasar_ubicacion_modulo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modulo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.pasar_ubicacion_modulo"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.pasar_ubicacion_modulo" title="Link to this definition">¶</a></dt>
+<dd><p>Asigna un valor al atributo de clase modulo_ubicacion, que indica en que módulo se tienen que buscar las clases herederas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>modulo</strong> (<em>module</em>) – Consiste en el módulo donde se encuentran definidas las clases herederas de la presente SúperClase</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Entidad.ver_parametros">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ver_parametros</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Entidad.ver_parametros"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Entidad.ver_parametros" title="Link to this definition">¶</a></dt>
+<dd><p>Método de clase que devuelve información sobre la clase para ser usada en una capa superior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Lista que contiene el nombre de la tabla, el nombre del campo clave y el módulo donde se encuentra la clase concreta utilizada.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[str,str,module]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Lista">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ABM_MVC.controlador.</span></span><span class="sig-name descname"><span class="pre">Lista</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clase_objeto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condicion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Lista"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Lista" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>SúperClase que crea, contiene y gestiona una lista de objetos.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Lista.lista">
+<span class="sig-name descname"><span class="pre">lista</span></span><a class="headerlink" href="#ABM_MVC.controlador.Lista.lista" title="Link to this definition">¶</a></dt>
+<dd><p>La lista de objetos propiamente dicha.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.Lista.listar_columnas">
+<span class="sig-name descname"><span class="pre">listar_columnas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">columnas</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#Lista.listar_columnas"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.Lista.listar_columnas" title="Link to this definition">¶</a></dt>
+<dd><p>Devuelve una lista con la/s columna/s solicitada/s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>columnas</strong> (<em>str</em><em> | </em><em>List</em><em>[</em><em>str</em><em>]</em>) – El nombre del campo requerido en la base de datos si se trata de uno sólo o una lista con los nombres si son varios.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Lista con los valores solicitados</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ABM_MVC.controlador.pasar_ubicacion_db">
+<span class="sig-prename descclassname"><span class="pre">ABM_MVC.controlador.</span></span><span class="sig-name descname"><span class="pre">pasar_ubicacion_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ubicacion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/controlador.html#pasar_ubicacion_db"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.controlador.pasar_ubicacion_db" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-ABM_MVC.modelo">
+<span id="abm-mvc-modelo-module"></span><h2>ABM_MVC.modelo module<a class="headerlink" href="#module-ABM_MVC.modelo" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ABM_MVC.modelo.</span></span><span class="sig-name descname"><span class="pre">Modelo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'database.db'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Clase que gestiona la conexión y operaciones en la base de datos</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.abrir_conexion">
+<span class="sig-name descname"><span class="pre">abrir_conexion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.abrir_conexion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.abrir_conexion" title="Link to this definition">¶</a></dt>
+<dd><p>Establece y devuelve una conexión con la base de datos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Objeto que representa la conexión con la base de datos.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>sqlite3.Connection</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.actualizar">
+<span class="sig-name descname"><span class="pre">actualizar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columnas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valores</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condicion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.actualizar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.actualizar" title="Link to this definition">¶</a></dt>
+<dd><p>Modifica un registro ya existente en la base de datos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tabla</strong> (<em>str</em>) – Nombre de la tabla</p></li>
+<li><p><strong>columnas</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Lista con los nombres de las columnas que recibirán valores</p></li>
+<li><p><strong>valores</strong> (<em>List</em>) – Lista con los valores que se insertarán</p></li>
+<li><p><strong>condicion</strong> (<em>str</em>) – Expresión que debe cumplirse para modificar el/los registro/s. Ej. «id = ?»</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Un entero con la cantidad de registros modificados.</p></li>
+<li><p>None si ocurre un error durante la ejecución.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.contar_registros">
+<span class="sig-name descname"><span class="pre">contar_registros</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">campo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.contar_registros"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.contar_registros" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene, de una tabla de la base de datos, la cantidad de registros que hay con un determinado valor en un campo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tabla</strong> (<em>str</em>) – Nombre de la tabla.</p></li>
+<li><p><strong>campo</strong> (<em>str</em>) – Nombre del campo de la tabla donde se buscará un valor.</p></li>
+<li><p><strong>valor</strong> (<em>Any</em>) – Valor que se buscará en la respectiva columna/campo.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Cantidad de registros que cumplen la condición requerida.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.crear_tabla">
+<span class="sig-name descname"><span class="pre">crear_tabla</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">esquema</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.crear_tabla"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.crear_tabla" title="Link to this definition">¶</a></dt>
+<dd><p>Crea una tabla en la base de datos si no existe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tabla</strong> (<em>str</em>) – Nombre de la tabla.</p></li>
+<li><p><strong>esquema</strong> (<em>str</em>) – Esquema de la tabla en formato SQL (ej. «id INTEGER PRIMARY KEY, nombre TEXT»).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Un entero indicando el resultado de la consulta (generalmente -1 para CREATE TABLE en SQLite).</p></li>
+<li><p>None si ocurre un error durante la ejecución.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.ejecutar_consulta">
+<span class="sig-name descname"><span class="pre">ejecutar_consulta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fetchall</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.ejecutar_consulta"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.ejecutar_consulta" title="Link to this definition">¶</a></dt>
+<dd><p>Ejecuta un requerimiento en la base de datos</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – Instrucción SQL</p></li>
+<li><p><strong>params</strong> (<em>List</em><em>[</em><em>Any</em><em>] </em><em>| </em><em>Tuple</em><em>[</em><em>Any</em><em>]</em><em>, </em><em>optional</em>) – Valores relacionados con el query. Defaults to None.</p></li>
+<li><p><strong>fetchall</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indica si se deben obtener todos los registros (para consultas SELECT). Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Una lista o una tupla con los registros si la consulta es un SELECT.</p></li>
+<li><p>Un entero con la cantidad de registros afectados si la consulta es de tipo INSERT, UPDATE o DELETE.</p></li>
+<li><p>None si ocurre un error durante la ejecución.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List | Tuple | int | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.eliminar">
+<span class="sig-name descname"><span class="pre">eliminar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condicion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valores</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.eliminar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.eliminar" title="Link to this definition">¶</a></dt>
+<dd><p>Elimina uno o varios registros de una tabla de una base de datos</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tabla</strong> (<em>str</em>) – Nombre de la tabla.</p></li>
+<li><p><strong>condicion</strong> (<em>str</em>) – Condicion que debe cumplirse para eliminar el registro. Ej. «id = ?»</p></li>
+<li><p><strong>valores</strong> (<em>List</em>) – Valores asociados a la condición.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Un entero con la cantidad de registros eliminados.</p></li>
+<li><p>None si ocurre un error durante la ejecución.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.insertar">
+<span class="sig-name descname"><span class="pre">insertar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columnas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valores</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.insertar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.insertar" title="Link to this definition">¶</a></dt>
+<dd><p>Inserta un registro en una tabla de la base de datos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tabla</strong> (<em>str</em>) – Nombre de la tabla donde se insertará el registro</p></li>
+<li><p><strong>columnas</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Lista con los nombres de las columnas que recibirán valores</p></li>
+<li><p><strong>valores</strong> (<em>List</em>) – Lista con los valores que se insertarán</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>-El ID de la última fila insertada si la operación fue exitosa.
+-None si ocurre un error durante la inserción.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.obtener_campos">
+<span class="sig-name descname"><span class="pre">obtener_campos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.obtener_campos"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.obtener_campos" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene una lista con los nombres de los campos de una tabla de la base de datos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tabla</strong> (<em>str</em>) – Nombre de la tabla.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Lista con los nombres de los campos de la tabla de referencia.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.modelo.Modelo.seleccionar">
+<span class="sig-name descname"><span class="pre">seleccionar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tabla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columnas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condicion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/modelo.html#Modelo.seleccionar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.modelo.Modelo.seleccionar" title="Link to this definition">¶</a></dt>
+<dd><p>Selecciona un grupo de registros de una tabla de la base</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tabla</strong> (<em>str</em>) – Nombre de la tabla.</p></li>
+<li><p><strong>columnas</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Columnas que serán retornadas en un array. Defaults to «*».</p></li>
+<li><p><strong>condicion</strong> (<em>str</em><em>, </em><em>optional</em>) – Condición que debe cumplir uno o varios campos. Defaults to None.</p></li>
+<li><p><strong>valores</strong> (<em>Any</em><em>, </em><em>optional</em>) – Los valores que determinan la condición, si la hubiera. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Una lista o una tupla con los registros.</p></li>
+<li><p>None si ocurre un error durante la ejecución.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List | Tuple | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ABM_MVC.vista">
+<span id="abm-mvc-vista-module"></span><h2>ABM_MVC.vista module<a class="headerlink" href="#module-ABM_MVC.vista" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ABM_MVC.vista.</span></span><span class="sig-name descname"><span class="pre">Plantilla</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clase_objeto</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Toplevel</span></code></p>
+<p>Clase heredera de tk.Toplevel y SúperClase de las diferentes vistas que gestionarán las operaciones entre la vista del usuario y el controlador.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tk</strong> (<em>object</em>) – Objeto de tkinter.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.clase_objeto">
+<span class="sig-name descname"><span class="pre">clase_objeto</span></span><a class="headerlink" href="#ABM_MVC.vista.Plantilla.clase_objeto" title="Link to this definition">¶</a></dt>
+<dd><p>Clase heredera de Entidad que será gestionada por el objeto creado.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.lista_de_widgets">
+<span class="sig-name descname"><span class="pre">lista_de_widgets</span></span><a class="headerlink" href="#ABM_MVC.vista.Plantilla.lista_de_widgets" title="Link to this definition">¶</a></dt>
+<dd><p>Lista que contiene listas con el formato [etiqueta,widget,es_campo_clave:bool] que servirá para contruir el formulario una vez que estén declarados los widgets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[List[str,object,bool]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.lista_de_comboboxes">
+<span class="sig-name descname"><span class="pre">lista_de_comboboxes</span></span><a class="headerlink" href="#ABM_MVC.vista.Plantilla.lista_de_comboboxes" title="Link to this definition">¶</a></dt>
+<dd><p>Lista de comboboxes que representan claves externas (si hubiera un combobox para la clave principal, no se registra en esta lista). La lista contiene [[objeto combox,»campo clave externa en la tabla»,lista de [id]]].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[List[object,str,List[Any]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.clave_principal">
+<span class="sig-name descname"><span class="pre">clave_principal</span></span><a class="headerlink" href="#ABM_MVC.vista.Plantilla.clave_principal" title="Link to this definition">¶</a></dt>
+<dd><p>Si la clave principal es ingresada por el usuario deberá usarse un entry, el argumento es una lista con un sólo objeto [objeto entry]. Si se trata de una clave autoincrement en la base de datos, no tendrá un input en el formulario de carga, pero puede seleccionarse con un combobox para modificarse, en este caso el argumento será una lista con dos elementos [objeto combobox, lista de id].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[object] | List[object,List[Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.campos_obligatorios">
+<span class="sig-name descname"><span class="pre">campos_obligatorios</span></span><a class="headerlink" href="#ABM_MVC.vista.Plantilla.campos_obligatorios" title="Link to this definition">¶</a></dt>
+<dd><p>En esta lista se registran todos los campos obligatorios en la carga, deben agregarse a la lista los objetos widgets, no las variables asociadas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[object]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.validacion_decimales">
+<span class="sig-name descname"><span class="pre">validacion_decimales</span></span><a class="headerlink" href="#ABM_MVC.vista.Plantilla.validacion_decimales" title="Link to this definition">¶</a></dt>
+<dd><p>Tupla que contiene la función de validación para números decimales y un patrón de formato asociado (“%P”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[Callable, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.validacion_enteros">
+<span class="sig-name descname"><span class="pre">validacion_enteros</span></span><a class="headerlink" href="#ABM_MVC.vista.Plantilla.validacion_enteros" title="Link to this definition">¶</a></dt>
+<dd><p>Tupla que contiene una función de validación para números enteros y un patrón de formato asociado (“%P”).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[Callable, str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.cancelar">
+<span class="sig-name descname"><span class="pre">cancelar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.cancelar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.cancelar" title="Link to this definition">¶</a></dt>
+<dd><p>Borra el contenido de los widgets y los switchea de habilitados a deshabilitados al cancelar una acción.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.chequear_campos_obligatorios">
+<span class="sig-name descname"><span class="pre">chequear_campos_obligatorios</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.chequear_campos_obligatorios"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.chequear_campos_obligatorios" title="Link to this definition">¶</a></dt>
+<dd><p>Chequea si los widgets incluidos en la lista self.campos_obligatorios tienen valores.
+En caso de no confirmarse en todos los casos se muestra un mensaje informando los campos vacíos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Devuelve True si todos los campos obligatorios tiene valores, o False en caso contrario.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.crear_combobox">
+<span class="sig-name descname"><span class="pre">crear_combobox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obligatorio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etiqueta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nombre_campo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">campo_para_mostrar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'descripcion'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">campo_para_guardar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'id'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.crear_combobox"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.crear_combobox" title="Link to this definition">¶</a></dt>
+<dd><p>Crea un widget Combobox de tkinter, junto con la etiqueta. En este caso no hay reglas de validación ya que el combobox tendrá el status de «readonly» o «disabled», por lo tanto sólo podrá seleccionar, no escribir.
+Agrega el respectivo objeto a la lista self.lista_de_widgets para que pueda ser gestionado por otros métodos.
+Agrega el widget a la lista self.clave_principal en caso de inferir, por el nombre de campo, que es la clave principal, en caso contrario lo agrega a self.lista_de_comboboxes.
+Agrega el widget a la lista self.campos_obligatorios en caso que así estuviera definido.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obligatorio</strong> (<em>bool</em>) – Indica si es obligatorio completar el campo.</p></li>
+<li><p><strong>etiqueta</strong> (<em>str</em>) – Texto de la etiqueta que se mostrará junto al widget.</p></li>
+<li><p><strong>nombre_campo</strong> (<em>str</em>) – Nombre del campo de la tabla al que apuntará el widget que, en caso de ser una clave externa, deberá coincidir con el nombre de la tabla vinculada a través del mismo.</p></li>
+<li><p><strong>campo_para_mostrar</strong> (<em>str</em><em>, </em><em>optional</em>) – En caso de que usemos este combobox para una clave externa, en este argumento declaramos el nombre del campo que se mostrará, de la tabla vinculada. Defaults to «descripcion».</p></li>
+<li><p><strong>campo_para_guardar</strong> (<em>str</em><em>, </em><em>optional</em>) – Al igual que lo mencionado para el argumento anterior, aquí declaramos el campo de la tabla relacionada que contiene los ids, estos son los valores que se guardan efectivamente en el campo de la tabla-entidad que estamos gestionando. Defaults to «id».</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.crear_entry">
+<span class="sig-name descname"><span class="pre">crear_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obligatorio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">etiqueta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nombre_campo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validacion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.crear_entry"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.crear_entry" title="Link to this definition">¶</a></dt>
+<dd><p>Crea un widget Entry de tkinter, junto con la etiqueta, en caso de haber una regla de validación se agrega en la construcción del Entry.
+Agrega el respectivo objeto a la lista self.lista_de_widgets para que pueda ser gestionado por otros métodos.
+Agrega el widget a la lista self.clave_principal en caso de inferir, por el nombre de campo, que es la clave principal.
+Agrega el widget a la lista self.campos_obligatorios en caso que así estuviera definido.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obligatorio</strong> (<em>bool</em>) – Indica si es obligatorio completar el campo.</p></li>
+<li><p><strong>etiqueta</strong> (<em>str</em>) – Texto de la etiqueta que se mostrará junto al widget.</p></li>
+<li><p><strong>nombre_campo</strong> (<em>str</em>) – Nombre del campo en la base de datos al que apuntará el widget y por lo tanto también es el nombre del respectivo atributo de la entidad gestionada.</p></li>
+<li><p><strong>validacion</strong> (<em>str</em><em>, </em><em>optional</em>) – Tipo de validación, «decimales» o «enteros», no se ingresa argumento si no se requiere validación. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.guardar">
+<span class="sig-name descname"><span class="pre">guardar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.guardar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.guardar" title="Link to this definition">¶</a></dt>
+<dd><p>Chequea si los campos obligatorios tienen valores, en ese caso contruye el objeto de la clase gestionada por el formulario, le asigna los valores de los widgets a los respectivos atributos e intenta guardarlo en la base de datos, informando si lo logró o no.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.messagebox_temporal">
+<span class="sig-name descname"><span class="pre">messagebox_temporal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">titulo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mensaje</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duracion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.messagebox_temporal"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.messagebox_temporal" title="Link to this definition">¶</a></dt>
+<dd><p>Crea una ventana con un mensaje y lo destruye en el tiempo estipulado.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>titulo</strong> (<em>str</em>) – Título de la ventana.</p></li>
+<li><p><strong>mensaje</strong> (<em>str</em>) – Mensaje que se mostrará.</p></li>
+<li><p><strong>duracion</strong> (<em>int</em><em>, </em><em>optional</em>) – Tiempo de duración de la ventana, expresado en milisegundos. Defaults to 2000.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.modificar">
+<span class="sig-name descname"><span class="pre">modificar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.modificar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.modificar" title="Link to this definition">¶</a></dt>
+<dd><p>Chequea si los campos obligatorios tienen valores, en ese caso le asigna los valores de los widgets a los atributos del objeto (ya construido cuando fue seleccionado el registro) e intenta relizar el update en la base, informando si lo logró o no.
+En caso de resultar exitosa la modificación se borran los valores de los widgets y se switchean.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.obtener_label">
+<span class="sig-name descname"><span class="pre">obtener_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget_objetivo</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.obtener_label"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.obtener_label" title="Link to this definition">¶</a></dt>
+<dd><p>Obtiene y retorna el texto de la etiqueta anterior a un determinado widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget_objetivo</strong> (<em>object</em>) – Widget del cual se quiere obtener la etiqueta.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Retorna el texto de la etiqueta buscada, o None en caso de no encontrarla.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.render_formulario_ABM">
+<span class="sig-name descname"><span class="pre">render_formulario_ABM</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.render_formulario_ABM"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.render_formulario_ABM" title="Link to this definition">¶</a></dt>
+<dd><p>Asigna una ubicación a los widgets creados y agrega los botones para Guardar, Seleccionar, Modificar, Borrar y Cancelar.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.reset_formulario">
+<span class="sig-name descname"><span class="pre">reset_formulario</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.reset_formulario"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.reset_formulario" title="Link to this definition">¶</a></dt>
+<dd><p>Pone en blanco todos los widgets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.seleccionar">
+<span class="sig-name descname"><span class="pre">seleccionar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.seleccionar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.seleccionar" title="Link to this definition">¶</a></dt>
+<dd><p>Selecciona un registro de la base de datos y completa los widgets del formulario con los valores obtenidos.
+Si no se ingresa un id, buscará ese dato en el atributo self.clave_principal y completará el resto de los campos con los datos obtenidos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>Any</em><em>, </em><em>optional</em>) – Id/clave del registro seleccionado. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.solo_decimales_con_coma">
+<span class="sig-name descname"><span class="pre">solo_decimales_con_coma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.solo_decimales_con_coma"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.solo_decimales_con_coma" title="Link to this definition">¶</a></dt>
+<dd><p>Valida el ingreso de números decimales usando una sola coma (no punto) como separador.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>texto</strong> (<em>str</em>) – texto a evaluar.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>False si no se cumple la condición y verdadero en caso contrario.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.solo_numeros">
+<span class="sig-name descname"><span class="pre">solo_numeros</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texto</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.solo_numeros"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.solo_numeros" title="Link to this definition">¶</a></dt>
+<dd><p>Evalúa si una cadena de texto es un núemro entero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>texto</strong> (<em>str</em>) – Texto a evaluar.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>False si no se cumple la condición y verdadero en caso contrario.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ABM_MVC.vista.Plantilla.switch_widgets">
+<span class="sig-name descname"><span class="pre">switch_widgets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ABM_MVC/vista.html#Plantilla.switch_widgets"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#ABM_MVC.vista.Plantilla.switch_widgets" title="Link to this definition">¶</a></dt>
+<dd><p>Habilita los widgets que están desabilitados y viceversa. En el caso de los comboboxes no se usa el modo «normal» sino «readonly», es decir que no se permite escribir en ningún caso.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ABM_MVC">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ABM_MVC" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pirulo</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ABM_MVC</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ABM_MVC package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">ABM_MVC</a><ul>
+      <li>Previous: <a href="modules.html" title="capítulo anterior">ABM_MVC</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, ariel.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/ABM_MVC.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

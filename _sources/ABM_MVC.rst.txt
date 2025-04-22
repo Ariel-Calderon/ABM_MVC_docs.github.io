@@ -1,0 +1,37 @@
+ABM\_MVC package
+================
+
+Submodules
+----------
+
+ABM\_MVC.controlador module
+---------------------------
+
+.. automodule:: ABM_MVC.controlador
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ABM\_MVC.modelo module
+----------------------
+
+.. automodule:: ABM_MVC.modelo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+ABM\_MVC.vista module
+---------------------
+
+.. automodule:: ABM_MVC.vista
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: ABM_MVC
+   :members:
+   :undoc-members:
+   :show-inheritance:
